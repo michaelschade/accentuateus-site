@@ -29,7 +29,7 @@ h2 > sub {
   font-weight: bold;
 }
 
-.tablesorter tr.active {
+.tablesorter tr.active, span.active {
   background-color: #DBFFDB !important;
 }
 
