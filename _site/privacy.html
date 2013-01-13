@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="UTF-8">
+  <title>Accentuate.us: Type in any language</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <link rel="stylesheet" href="media/skeleton/base.css">
+  <link rel="stylesheet" href="media/skeleton/skeleton.css">
+  <link rel="stylesheet" href="media/skeleton/layout.css">
+  <link rel="stylesheet" href="media/main.css" />
+
+  <script src="/media/jquery.js"></script>
+
+  <style type="text/css">#charlifter-text em{color:red;}</style>
+  <script type="text/javascript">
+    var updateExampleText=function(lang,oldText,newText){$("#charlifter-lang").parent().fadeOut('fast',function(){$("#charlifter-lang").text(lang);$("#charlifter-text").text(oldText);$(this).fadeIn('fast');$("#charlifter-text").delay(2000).hide(0,function(){$(this).html(newText).show(0).delay(2000);});});}
+    var init=false;function runEffect(){var examples=[["Dangme","No fee no nge he blo ne e jeo e juemi ke e susumi kpo ke tsoo","N<em>ɔ</em> f<em>ɛɛ</em> n<em>ɔ</em> ng<em>ɛ</em> he bl<em>ɔ</em> n<em>ɛ</em> e je<em>ɔ</em> e ju<em>ɛ</em>mi k<em>ɛ</em> e susumi kpo k<em>ɛ</em> ts<em>ɔɔ"],["Akan","Obiara wo ne kyefa anaa hokwan se oka n'adwene ne nsusuwii","Obiara w<em>ɔ</em> ne ky<em>ɛ</em>fa anaa hokwan s<em>ɛ</em> <em>ɔ</em>ka n'adwene ne nsusuwii"],["Azərbaycan","Her bir sexs eqide ve onu serbest ifade etmek azadligi huququna malikdir","H<em>ə</em>r bir <em>şə</em>xs <em>ə</em>qid<em>ə</em> v<em>ə</em> onu s<em>ə</em>rb<em>ə</em>st ifad<em>ə</em> etm<em>ə</em>k azadl<em>ığı</em> h<em>ü</em>ququna malikdir"],["Wawle","Sran kwlakwla o le atin o bu i bobo ti bo nun akundan, o ken i klun nde nga i wan o kan'n","Sran kwlakwla <em>ɔ</em> le atin <em>ɔ</em> bu i b<em>ɔ</em>b<em>ɔ</em> ti bo nun akundan, <em>ɔ</em> k<em>ɛ</em>n i klun nd<em>ɛ</em> nga i wan <em>ɔ</em> kan'n"],["Bamanankan","Bee sago be i miiriya la, ani i kakilila jirali","B<em>ɛɛ</em> sago b<em>ɛ</em> i miiriya la, ani i kakilila jirali"],["Brezhoneg","Pep hini en deus gwir d'ar frankiz d'ober e veno ha d'en disklerian","Pep hini en deus gwir d'ar frankiz d'ober e veno ha d'en diskl<em>ê</em>ria<em>ñ"],["Català","Tota persona te dret a la llibertat d'opinio i d'expressio","Tota persona t<em>é</em> dret a la llibertat d'opini<em>ó</em> i d'expressi<em>ó"],["Čeština","Kazdy ma pravo na svobodu presvedceni a projevu","Ka<em>ž</em>d<em>ý</em> m<em>á</em> pr<em>á</em>vo na svobodu p<em>ř</em>esv<em>ě</em>d<em>č</em>en<em>í</em> a projevu"],["Deutsch","Jeder hat das Recht auf Meinungsfreiheit und freie Meinungsausserung","Jeder hat das Recht auf Meinungsfreiheit und freie Meinungs<em>ä</em>u<em>ß</em>erung"],["Joola","Anoosan nababaj druwa, ebaj kawonoor kiiya di kayiisen ko nen manumanumi eeno","Anoosan nababaj druwa, ebaj kawonoor kiiya di k<em>á</em>yiisen ko nen manuma<em>ŋ</em>umi eeno"],["Eʋegbe","Amesiame kpo mo abu tame le edokui si eye woade efe susu agblo faa moxexe manomee","Amesiame kp<em>ɔ</em> m<em>ɔ</em> abu tame le e<em>ɖ</em>okui si eye w<em>ò</em>a<em>ɖ</em>e e<em>ƒ</em>e susu agbl<em>ɔ</em> faa m<em>ɔ</em>xexe man<em>ɔ</em>mee"],["Español","Todo individuo tiene derecho a la libertad de opinion y de expresion","Todo individuo tiene derecho a la libertad de opini<em>ó</em>n y de expresi<em>ó</em>n"],["Eesti","Igal inimesel on oigus veendumuste vabadusele ja nende veendumuste vabalt avaldamisele","Igal inimesel on <em>õ</em>igus veendumuste vabadusele ja nende veendumuste vabalt avaldamisele"],["Fɔngbè","Gbeto bi do ace bo na lin nu e do nuwu bo ka na do xo","Gb<em>ɛ</em>t<em>ɔ</em> bi <em>ɖ</em>o ac<em>ɛ</em> bo na lin n<em>ù</em> <em>é</em> do nuwu bo ka na <em>ɖɔ</em> xo"],["Føroyskt","Oll skulu vera fraels at hava sinar askodanir og bera taer fram uttan fordan","<em>Ø</em>ll skulu vera fr<em>æ</em>ls at hava s<em>í</em>nar <em>á</em>sko<em>ð</em>anir og bera t<em>æ</em>r fram uttan for<em>ð</em>an"],["Français","Tout individu a droit a la liberte d'opinion et d'expression","Tout individu a droit <em>à</em> la libert<em>é</em> d'opinion et d'expression"],["Furlan","Ogni individui al a derit a la libertat di impinion e di espression","Ogni individui al <em>à</em> derit a la libert<em>â</em>t di impinion e di espression"],["Ga","Mo fee mo ye hegbe ake esusuo no ko he bo ni esumoo, ni ehaa aleo hu","M<em>ɔ</em> f<em>ɛɛ</em> m<em>ɔ</em> y<em>ɛ</em> hegb<em>ɛ</em> ak<em>ɛ</em> esusu<em>ɔ</em> n<em>ɔ</em> ko he b<em>ɔ</em> ni esum<em>ɔɔ</em>, ni ehaa ale<em>ɔ</em> hu"],["Gaeilge","Ta ag gach uile dhuine an ceart chun saoirse tuairime agus chun saoirse nochtuithe tuairime","T<em>á</em> ag gach uile dhuine an ceart chun saoirse tuairime agus chun saoirse nochtuithe tuairime"],["Gàidhlig","Tha coir aig gach neach air saorsa beachd agus labhairt","Tha c<em>ò</em>ir aig gach neach air saorsa beachd agus labhairt"],["Galego","Todo individuo ten dereito a liberdade de opinion e de expresion","Todo individuo ten dereito <em>á</em> liberdade de opini<em>ó</em>n e de expresi<em>ó</em>n"],["Hausa","Kowane dan-adam na da hakkin ya sami yancin kasancewa da ra'ayin kansa da yancin fadar ra'ayin nasa","Kowane <em>ɗ</em>an-adam na da hakkin ya sami <em>ƴ</em>ancin kasancewa da ra'ayin kansa da <em>ƴ</em>ancin fa<em>ɗ</em>ar ra'ayin nasa"],["ʻŌlelo Hawaiʻi","Ua noa i na kanaka apau ke kuokoa o ka manao a me ka hoike ana i ka manao","Ua noa i n<em>ā</em> k<em>ā</em>naka apau ke k<em>ūʻ</em>oko<em>ʻ</em>a o ka mana<em>ʻ</em>o a me ka h<em>ōʻ</em>ike <em>ʻ</em>ana i ka mana<em>ʻ</em>o"],["Hrvatski","Svatko ima pravo na slobodu misljenja i izracavanja","Svatko ima pravo na slobodu mi<em>š</em>ljenja i izra<em>ć</em>avanja"],["Kreyòl Ayisyen","Tout moun gen dwa a libete lide yo ak lapawol yo","Tout moun gen dwa a lib<em>è</em>te lide yo ak lapaw<em>ò</em>l yo"],["Magyar","Minden szemelynek joga van a velemeny es a kifejezes szabadsagahoz","Minden szem<em>é</em>lynek joga van a v<em>é</em>lem<em>é</em>ny <em>é</em>s a kifejez<em>é</em>s szabads<em>á</em>g<em>á</em>hoz"],["Igbo","Onye o bula nwere ohere uche aka ya na nkwuputa uche ya","Onye <em>ọ</em> b<em>ụ</em>la nwere ohere uche aka ya na nkwup<em>ụ</em>ta uche ya"],["Íslenska","Hver madur skal frjals skodana sinna og ad thvi ad lata thaer i ljos","Hver ma<em>ð</em>ur skal frj<em>á</em>ls sko<em>ð</em>ana sinna og a<em>ð</em> <em>þ</em>v<em>í</em> a<em>ð</em> l<em>á</em>ta <em>þæ</em>r <em>í</em> lj<em>ó</em>s"],["Italiano","Ogni individuo ha diritto alla liberta di opinione e di espressione","Ogni individuo ha diritto alla libert<em>à</em> di opinione e di espressione"],["Kurdî","Herkes mafe azadiya fikr u ifade heye","Herkes maf<em>ê</em> azadiya fikr <em>û</em> <em>î</em>fade heye"],["Lingála","Moto nyonso azali na likoki ya bokanisi pe bolobi","Moto ny<em>ɔ́</em>ns<em>ɔ</em> azal<em>í</em> na likok<em>í</em> ya bokanisi p<em>é</em> bolobi"],["Lietuvių","Keikvienas zmogus turi teise i isitikinimu ir ju reiskimo laisve","Keikvienas <em>ž</em>mogus turi teis<em>ę</em> <em>į</em> <em>į</em>sitikinim<em>ų</em> ir j<em>ų</em> rei<em>š</em>kimo laisv<em>ę"],["Latviešu","Ikvienam ir tiesibas uz parliecibas un izteiksmes brivibu","Ikvienam ir ties<em>ì</em>bas uz p<em>â</em>rliec<em>ì</em>bas un izteiksmes br<em>ì</em>v<em>ì</em>bu"],["Mòoré","Ned buud faa tara sor n toe n te a sen date la a gom a sen date","Ned buud f<em>ã</em>a tara sor n t<em>õ</em>e n t<em>ẽ</em> a s<em>ẽ</em>n date la a gom a s<em>ẽ</em>n date"],["Malti","Kulhadd ghandu l-jedd ghal-liberta li jzomm l-opijoni tieghu u li jfissirha","Kulhadd ghandu l-jedd ghal-libert<em>à</em> li j<em>ż</em>omm l-opijoni tieghu u li jfissirha"],["Sesotho sa Leboa","Mang le mang o na le tokelo ya tokologo ya kgopolo le tlhagiso ya kgopolo ye","Mang le mang o na le tokelo ya tokologo ya kgopolo le tlhagi<em>š</em>o ya kgopolo ye"],["Polski","Kazdy czlowiek ma prawo wolnosci opinii i wyrazania jej","Ka<em>ż</em>dy cz<em>ł</em>owiek ma prawo wolno<em>ś</em>ci opinii i wyra<em>ż</em>ania jej"],["Português","Todo o individuo tem direito a liberdade de opiniao e de expressao","Todo o indiv<em>í</em>duo tem direito <em>à</em> liberdade de opini<em>ã</em>o e de express<em>ã</em>o"],["Română","Orice om are dreptul la libertatea opiniilor si exprimarii","Orice om are dreptul la libertatea opiniilor <em>ş</em>i exprim<em>ă</em>rii"],["Sámegiella","Juohkehaccas lea vuoigatvuohta oaivil- ja satnefriddjavuhtii","Juohkeha<em>čč</em>as lea vuoigatvuohta oaivil- ja s<em>á</em>tnefriddjavuhtii"],["Sängö","Amu na zo kue ngangu ti zara ti bibe na ti sarango tene","Am<em>û</em> na zo k<em>ûê</em> ngang<em>ü</em> t<em>î</em> zar<em>ä</em> t<em>î</em> bib<em>ê</em> na t<em>î</em> s<em>ä</em>r<em>ä</em>ng<em>ö</em> t<em>ë</em>n<em>ë"],["Slovenčina","Kazdy ma pravo na slobodu presvedcenia a prejavu","Ka<em>ž</em>d<em>ý</em> m<em>á</em> pr<em>á</em>vo na slobodu presved<em>č</em>enia a prejavu"],["Slovenščina","Vsakdo ima pravico do svobode misljenja in izrazanja vstevsi pravico","Vsakdo ima pravico do svobode mi<em>š</em>ljenja in izra<em>ž</em>anja v<em>š</em>tev<em>š</em>i pravico"],["Gagana Sāmoa","O tagata taitoatasi uma e i ai lana aia tatau i le saolotoga o le fefaaaliaiga o manatu ma taofi","O tagata ta<em>ʻ</em>ito<em>ʻ</em>atasi <em>ʻ</em>uma e i ai lana <em>ā</em>i<em>ā</em> tatau i le sa<em>ʻ</em>olotoga o le fef<em>āʻ</em>aalia<em>ʻ</em>iga o manatu ma t<em>ā</em>ofi"],["Shqip","Gjithkush ka te drejten e lirise se mendimit dhe te shprehjes","Gjithkush ka t<em>ë</em> drejt<em>ë</em>n e liris<em>ë</em> s<em>ë</em> mendimit dhe t<em>ë</em> shprehjes"],["Svenska","Envar har ratt till asiktsfrihet och yttrandefrihet","Envar har r<em>ä</em>tt till <em>å</em>siktsfrihet och yttrandefrihet"],["Tiv","Hanmaor ngu a ian gbar gbar i lun a mhen u nan man oron kwagh u nan soo yo","Hanmaor ngu a ian gbar gbar i lun a mhen u nan man <em>ô</em>ron kwagh u nan soo y<em>ô"],["Türkmençe","Her bir adam ynam azatlygyna we ynamyny erkin beyan etmage haklydyr","Her bir adam ynam azatlygyna we ynamyny erkin be<em>ý</em>an etm<em>ä</em>ge haklydyr"],["Türkçe","Her ferdin fikir ve fikirlerini aciklamak hurriyetine hakki vardir","Her ferdin fikir ve fikirlerini a<em>çı</em>klamak h<em>ü</em>rriyetine hakk<em>ı</em> vard<em>ı</em>r"],["Tiếng Việt","Moi nguoi deu co quyen tu do ngon luan va bay to quan diem","M<em>ọ</em>i ng<em>ườ</em>i <em>đề</em>u c<em>ó</em> quy<em>ề</em>n t<em>ự</em> do ng<em>ô</em>n lu<em>ậ</em>n v<em>à</em> b<em>ầ</em>y t<em>ỏ</em> quan <em>đ</em>i<em>ể</em>m"],["Wolof","Nit ku ne am na san-san wax mbaa bind lu ko soob","Nit ku ne am na sa<em>ñ</em>-sa<em>ñ</em> wax mbaa bind lu ko soob"],["Yorùbá","Eni kookan lo ni eto si omi nira lati ni imoran ti o wu u, ki o si so iru imoran bee jade","<em>Ẹ</em>n<em>ì</em> k<em>ọ̀ọ̀</em>kan l<em>ó</em> n<em>í</em> <em>ẹ̀</em>t<em>ọ́</em> s<em>í</em> <em>ò</em>m<em>ì</em> nira l<em>á</em>ti n<em>í</em> <em>ì</em>m<em>ọ̀</em>r<em>à</em>n t<em>í</em> <em>ó</em> w<em>ù</em> <em>ú</em>, k<em>í</em> <em>ó</em> s<em>ì</em> s<em>ọ</em> ir<em>ú</em> <em>ì</em>m<em>ọ̀</em>r<em>à</em>n b<em>ẹ́ẹ̀</em> j<em>á</em>de"],];if(!init){var num=examples.length-1;init=true;}
+    else{var num=Math.floor(Math.random()*examples.length);}
+    updateExampleText(examples[num][0],examples[num][1],examples[num][2]);}
+    setInterval('runEffect()',5000);$(document).ready(function() {runEffect(); });
+  </script>
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+<body>
+  <div class="container">
+    <div id="sidebar" class="five columns">
+      <a href="/"><img id="logo" src="media/logo.png" alt="Accentuate.us" /></a>
+
+      <p><strong>Accentuate.us</strong> allows you to type quickly and easily
+      in more than 100 languages without extra keystrokes or a special
+      keyboard.</p>
+
+      <ul id="navigation">
+        <li><a href="/">Overview</a></li>
+        <li><a href="/languages.html">Languages</a></li>
+        <li><a href="/features.html">Features</a></li>
+        <li><a href="/contributing.html">Contributing</a></li>
+        <li><a href="/talks.html">Talks</a></li>
+        <li><a href="/thanks.html">Thanks</a></li>
+        <li><a href="/privacy.html">Privacy</a></li>
+      </ul>
+
+      <p><strong>Have a question?</strong> Ask our friendly community by emailing <a href="mailto:accentuateus@googlegroup.com">accentuateus@googlegroup.com</a>.</p>
+      <p><strong>Want to help out?</strong> Join our <a href="https://groups.google.com/forum/?fromgroups#!forum/accentuteus">mailing list</a> so you can answer others' questions and help shape the future of Accentuate.us.</p>
+      <p><a href="https://twitter.com/accentuateus" target="_blank">@accentuateus</a> | <a href="http://www.facebook.com/pages/Accentuateus/172146389511629" target="_blank">facebook</a></p>
+    </div>
+
+    <div class="eleven columns">
+      <h1 id="privacy">Privacy</h1>
+
+<p>The Firefox add-on communicates with our servers in three ways: (1)
+upon initialization, to get the list of available languages, (2) whenever
+you restore a text, and (3) when you choose to provide feedback. In all
+three cases, we store basic information about your connection that does
+not reference an individually identifiable user: the IP address and
+a UserAgent string which contains the version of your browser and the
+version of the add-on.</p>
+
+<p>When restoring a text or providing feedback, we also log the requested
+language in order to evaluate the demand for different languages and help
+serve you better.</p>
+
+<p>When you restore a text using Accentuate.us, neither the original text
+nor the corrected text are stored on our servers.</p>
+
+<p>The only time we will store your text on our servers is when you
+explicitly provide the text to us as feedback. Feedback is never
+activated by default; you must opt-in every time and you select the text
+that is sent. We store the text you highlight, together with the words
+preceding and following the highlighted text, for statistical
+purposes.</p>
+
+<p>Firefox will periodically check the Mozilla Add-ons site for updates.
+This is only to give you the latest security and bug fixes.</p>
+
+
+      <blockquote>
+        <p id="charlifter-text"></p>
+        <cite id="charlifter-lang"></cite>
+      </blockquote>
+    </div>
+  </div>
+</body>
+</html>
